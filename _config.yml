@@ -1,0 +1,52 @@
+# GitHub Pages Configuration for A.P.KA Website
+
+# Site Settings
+title: "A.P.KA - Alliance Politique des Kasavubistes"
+description: "Site officiel de l'Alliance Politique des Kasavubistes - Perpétuant l'héritage du Président Joseph Kasavubu"
+baseurl: "" # Leave empty for username.github.io repos
+url: "https://your-username.github.io" # Replace with your GitHub username
+
+# SEO Settings
+lang: fr
+author: "Alliance Politique des Kasavubistes"
+keywords: "APKA, Alliance Politique Kasavubistes, Joseph Kasavubu, RDC, Congo, Politique"
+
+# Social Media
+social:
+  facebook: "https://www.facebook.com/share/1GfPiBwfsj/"
+  youtube: "https://www.youtube.com/watch?v=0pFzmUU_GZ4"
+  whatsapp: "+243830497332"
+
+# Contact Information
+contact:
+  phone: "+243830497332"
+  email: "ngueyipaul@gmail.com"
+  address: "123 Avenue des Kasavubistes, Kinshasa, RDC"
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - .gitignore
+  - .git
+
+# Include files
+include:
+  - _redirects

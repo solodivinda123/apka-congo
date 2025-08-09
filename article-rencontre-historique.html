@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rencontre historique : Pierre Baseya Ndombe s'entretient avec Martin Fayulu Madidi - A.P.KA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --blue: #002B7F;
+            --yellow: #F7D417;
+            --red: #CE1126;
+            --light: #F8F9FA;
+            --dark: #1A1A1A;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-image {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.15));
+            transition: var(--transition);
+            border-radius: 8px;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.08);
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--blue);
+        }
+        
+        .logo-text span {
+            color: var(--red);
+        }
+        
+        /* Navigation */
+        .nav-container {
+            position: relative;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(206, 17, 38, 0.2);
+        }
+        
+        nav {
+            display: flex;
+            gap: 0;
+            position: relative;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #6c757d;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 12px 20px;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            background: transparent;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        nav a:hover {
+            color: var(--red);
+            transform: translateY(-1px);
+        }
+        
+        nav a.active {
+            background: linear-gradient(180deg, var(--red) 0%, #e63946 100%);
+            color: white;
+            box-shadow: 
+                0 4px 15px rgba(206, 17, 38, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(206, 17, 38, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        nav a i {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        nav a.active i {
+            opacity: 1;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--blue);
+        }
+        
+        /* Article Hero */
+        .article-hero {
+            background: linear-gradient(rgba(0, 43, 127, 0.8), rgba(0, 43, 127, 0.8)), url('images/apka-group.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        .article-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .article-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        /* Article Content */
+        .article-container {
+            padding: 80px 0;
+        }
+        
+        .article-content {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .article-meta i {
+            color: var(--red);
+            margin-right: 5px;
+        }
+        
+        .article-category {
+            background: var(--red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .article-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--blue);
+            line-height: 1.3;
+        }
+        
+        .article-excerpt {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-style: italic;
+            padding: 20px;
+            background: var(--light);
+            border-left: 4px solid var(--red);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .article-body p {
+            margin-bottom: 25px;
+        }
+        
+        .article-body h2 {
+            font-size: 1.8rem;
+            color: var(--blue);
+            margin: 40px 0 20px 0;
+        }
+        
+        .article-body h3 {
+            font-size: 1.4rem;
+            color: var(--red);
+            margin: 30px 0 15px 0;
+        }
+        
+        .quote {
+            background: linear-gradient(135deg, var(--blue) 0%, #1a4ba1 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-weight: 600;
+            margin-top: 15px;
+            font-style: normal;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 10px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .article-tag {
+            background: var(--light);
+            color: var(--blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .article-tag:hover {
+            background: var(--blue);
+            color: white;
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-bottom: 30px;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--blue);
+            transform: translateX(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0 30px;
+            margin-top: 80px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-about {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--blue);
+            transform: translateY(-3px);
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--red);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            color: var(--red);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                border-radius: 15px;
+                padding: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                margin-top: 10px;
+            }
+            
+            .nav-container.show {
+                display: block;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            nav a {
+                padding: 15px 20px;
+                border-radius: 12px;
+                justify-content: flex-start;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .article-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .article-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .article-content {
+                padding: 30px 20px;
+            }
+            
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/Y4NtqPdg/Untitled-1.jpg" alt="APKA Logo" class="logo-image" onerror="this.style.display='none'">
+                <div class="logo-text">A.P.<span>KA</span></div>
+            </div>
+            
+            <div class="nav-container">
+                <nav>
+                    <a href="APKA.index.html">
+                        <i class="fas fa-home"></i>
+                        Accueil
+                    </a>
+                    <a href="APKA.index.html#apropos">
+                        <i class="fas fa-info-circle"></i>
+                        À Propos
+                    </a>
+                    <a href="APKA.index.html#valeurs">
+                        <i class="fas fa-heart"></i>
+                        Nos Valeurs
+                    </a>
+                    <a href="APKA.index.html#histoire">
+                        <i class="fas fa-history"></i>
+                        Notre Histoire
+                    </a>
+                    <a href="APKA.index.html#leader">
+                        <i class="fas fa-user-tie"></i>
+                        Notre Leader
+                    </a>
+                    <a href="blog.html" class="active">
+                        <i class="fas fa-blog"></i>
+                        Blog
+                    </a>
+                    <a href="APKA.index.html#rejoindre">
+                        <i class="fas fa-user-plus"></i>
+                        Nous Rejoindre
+                    </a>
+                </nav>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Article Hero -->
+    <section class="article-hero">
+        <div class="container">
+            <h1>Rencontre historique : Pierre Baseya Ndombe s'entretient avec Martin Fayulu Madidi</h1>
+            <p>Une union politique pour renforcer la cohésion nationale face à l'agression rwandaise</p>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <section class="article-container">
+        <div class="container">
+            <a href="blog.html" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i>
+                Retour au Blog
+            </a>
+            
+            <div class="article-content">
+                <div class="article-meta">
+                    <span class="article-category">Histoire</span>
+                    <span><i class="fas fa-calendar"></i> 23-06-2025</span>
+                    <span><i class="fas fa-clock"></i> 14:06:22</span>
+                    <span><i class="fas fa-user"></i> Pierre Baseya Ndombe</span>
+                    <span><i class="fas fa-comments"></i> 12 commentaires</span>
+                </div>
+                
+                <h1 class="article-title">Rencontre historique : Pierre Baseya Ndombe s'entretient avec Martin Fayulu Madidi</h1>
+                
+                <div class="article-excerpt">
+                    Le Président de la plateforme politique "Alliance politique des Kasavubistes", Pierre Baseya Ndombe, s'est entretenu ce lundi 22 Juin avec le Président de l'Ecide, Martin Fayulu Madidi autour du "Camp de la Patrie".
+                </div>
+                
+                <div class="article-body">
+                    <p>Cette union des partis politiques prônant le fédéralisme dirigée par Pierre Baseya Ndombe dit avoir rencontré Martin Fayulu Madidi pour l'encourager par rapport à son idée de lancer une nouvelle dynamique politique dénommée Camp de la Patrie face à l'agression de la RDC par le Rwanda.</p>
+                    
+                    <div class="quote">
+                        "L'Alliance politique des Kasavubistes que nous sommes, soutenons toutes les idées politiques qui visent à renforcer la cohésion nationale et surtout mettre fin à la guerre. C'est dans ce sens que nous sommes venus nous entretenir avec le Président Martin Fayulu Madidi sur le Camp de la Patrie, idée que nous encourageons et soutenons. Nous lui avons exprimé, de vive voix, notre soutien et l'avons encouragé dans ce sens. Martin Fayulu nous a dit ce qu'il entend par Camp de la Patrie qui doit demeurer un état d'esprit face à l'agression Rwandaise dont nous sommes victimes"
+                        <div class="quote-author">- Pierre Baseya Ndombe, Président national de l'APKA</div>
+                    </div>
+                    
+                    <h2>L'héritage de Joseph Kasavubu : Un modèle de leadership pacifique</h2>
+                    
+                    <p>"Vous savez que nous sommes des disciples spirituels du feu Président Joseph Kasavubu. Il n'y a pas mieux que lui dans la défense de l'intégrité territoriale de manière pacifique. Il a reçu des humiliations de tout genre, subi des chocs aussi immenses que divers pour maintenir le Congo un et indivisible au lendemain de notre indépendance."</p>
+                    
+                    <h3>Un appel à l'unité nationale</h3>
+                    
+                    <p>Pierre Baseya Ndombe a également souligné l'importance de l'unité nationale face aux menaces existentielles :</p>
+                    
+                    <div class="quote">
+                        "Nous pensons fermement que les congolais doivent apprendre à oublier leurs idéologies politiques référentielles chaque fois que le pays fait face à une sérieuse menace existentielle comme celle de l'agression du Rwanda. Nous devons nous unir et réfléchir comme des hommes pour que cette agression soit la dernière en éradiquant de manière sérieuse toutes virtuelles agressions à venir."
+                        <div class="quote-author">- Pierre Baseya Ndombe</div>
+                    </div>
+                    
+                    <h3>Soutien au Président de la République</h3>
+                    
+                    <p>Le Président de l'APKA a également réitéré le soutien de son parti au Président de la République :</p>
+                    
+                    <p>"Nous réitérons notre soutien au Président de la République, Félix Tshisekedi et exhortons tous les politiciens à taire leurs divergences politiques pour faire bloc derrière la Patrie, la sauver et faire en sorte que nous ne perdions aucun centimètre de notre territoire."</p>
+                    
+                    <h2>Un message d'espoir et de détermination</h2>
+                    
+                    <p>En conclusion, Pierre Baseya Ndombe a lancé un message fort à tous les Congolais :</p>
+                    
+                    <div class="quote">
+                        "Nous n'avons que ce pays, et nous devons faire tout pour qu'on ne nous le ravisse pas par les aventuriers qui profitent de notre distraction."
+                        <div class="quote-author">- Pierre Baseya Ndombe</div>
+                    </div>
+                    
+                    <p>Cette rencontre historique entre les deux leaders politiques marque un tournant important dans la politique congolaise, démontrant que face aux menaces extérieures, l'unité nationale doit primer sur les divergences politiques.</p>
+                </div>
+                
+                <div class="article-tags">
+                    <span class="article-tag">Pierre Baseya Ndombe</span>
+                    <span class="article-tag">Martin Fayulu</span>
+                    <span class="article-tag">APKA</span>
+                    <span class="article-tag">ECIDE</span>
+                    <span class="article-tag">Camp de la Patrie</span>
+                    <span class="article-tag">Congo</span>
+                    <span class="article-tag">Rwanda</span>
+                    <span class="article-tag">Unité Nationale</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.ibb.co/Y4NtqPdg/Untitled-1.jpg" alt="APKA Logo" style="height: 40px; width: auto; margin-right: 10px;" onerror="this.style.display='none'">
+                        <span>A.P.KA</span>
+                    </div>
+                    <p class="footer-about">L'Alliance Politique des Kasavubistes. Notre devise est l'honnêteté, l'intégrité et la bonne gouvernance.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1GfPiBwfsj/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=0pFzmUU_GZ4" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="APKA.index.html">Accueil</a></li>
+                        <li><a href="APKA.index.html#apropos">À Propos</a></li>
+                        <li><a href="APKA.index.html#valeurs">Nos Valeurs</a></li>
+                        <li><a href="APKA.index.html#histoire">Notre Histoire</a></li>
+                        <li><a href="APKA.index.html#leader">Notre Leader</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="APKA.index.html#rejoindre">Nous Rejoindre</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contactez-nous</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Avenue des Kasavubistes, Kinshasa, RDC</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="https://wa.me/243830497332" target="_blank" style="color: #aaa; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#aaa'">+243830497332</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>ngueyipaul@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Alliance Politique des Kasavubistes (A.P.KA). Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/243830497332" class="whatsapp-float" target="_blank" title="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            document.querySelector('.nav-container').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
